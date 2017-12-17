@@ -1,4 +1,7 @@
-pipelineJob("pipeline-calls-other-pipeline") {
+folder('DAAC') {
+    description('Folder containing all jobs for DAAC')
+}
+pipelineJob("DAAC/DAAC-PIPELINE") {
     logRotator{
         numToKeep 30
     }
@@ -6,7 +9,7 @@ pipelineJob("pipeline-calls-other-pipeline") {
         cps {
             sandbox()
             script("""
-                @Library("your-library-name") _
+                @Library("java-maven-build") _
                 standardPipeline {
                         projectName = "DAAC"
                         serverDomain = "www.daac.io"

@@ -5,7 +5,7 @@ def call(body) {
         body.delegate = config
         body()
 
-        node {
+        node(java) {
             // Clean workspace before doing anything
             deleteDir()
 
