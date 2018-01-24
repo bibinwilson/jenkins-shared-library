@@ -1,6 +1,6 @@
 stage ('Clone') {
-                   sh "echo 'Cloning ${config.projectName} ...'"
+                   sh "echo 'Cloning ...'"
                 }
                 stage ('Build') {
-                    sh "echo 'building ${config.projectName} ...'"
+                    sh "echo 'building...'"
                 }
