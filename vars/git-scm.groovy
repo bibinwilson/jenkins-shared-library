@@ -5,9 +5,9 @@ def call(body) {
         body.delegate = config
         body() 
            
-        stage ('Clone') {
+                stage ('Clone') {
                    sh "echo 'Cloning ...'"
-                   git 'https://github.com/spring-projects/spring-petclinic.git'
+                   
                 }
                 stage ('Build') {
                     sh "echo 'building...'"
