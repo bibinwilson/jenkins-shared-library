@@ -7,6 +7,7 @@ def call(body) {
            
         stage ('Clone') {
                    sh "echo 'Cloning ...'"
+                   git 'https://github.com/spring-projects/spring-petclinic.git'
                 }
                 stage ('Build') {
                     sh "echo 'building...'"
